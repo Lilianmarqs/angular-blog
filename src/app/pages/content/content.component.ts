@@ -24,5 +24,9 @@ export class ContentComponent implements OnInit {
 
   setValuesToComponent(id:string){
     const result  = dataFake.filter(article => article.id == id)
+
+    if(!result){
+      this.contentTitle = result.title
+    }
   }
 }
